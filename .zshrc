@@ -21,6 +21,7 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(pyenv init -)"
 
+[[ ! -v $TOKEN_GITHUB_PAT ]] && export GITHUB_TOKEN=$TOKEN_GITHUB_PAT
 
 
 
