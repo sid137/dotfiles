@@ -1,5 +1,3 @@
-. ~/.zaliases
-
 [[ ! -v $TOKEN_GITHUB_PAT ]] && export GITHUB_TOKEN=$TOKEN_GITHUB_PAT
 
 export MERAKI_BOUNDLESS_DIGITAL=849070
