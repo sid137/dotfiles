@@ -1,5 +1,4 @@
 # Golang
-alias go=go1.18beta1
 alias got='go mod tidy'
 alias gg='ginkgo *'
 
@@ -161,7 +160,7 @@ alias wk='cd ~/thesis/thesis; watchr watch.rb'
 # http://majewsky.wordpress.com/2009/07/11/shutdown-your-machine-automatically-or-from-remote/
 alias k9='kill -9'
 alias .z='. ~/.zshrc'
-alias vsh='vim ~/.zshrc; . ~/.zshrc; cp ~/.zshrc ~/code/dotfiles'
+alias vsh='vim ~/.zshrc; . ~/.zshrc'
 alias ra='cd ~/tracking'
 alias gi='gem install'
 alias r='rails'
@@ -267,7 +266,7 @@ alias vi='vim'
 alias vc='vim -u ~/.vim/encrypted_vim_rc -x'
 alias sagu='sudo apt-get update'
 alias ali='. ~/.zaliases; . ~/.zshrc'
-alias vali='vim ~/.zaliases; . ~/.zaliases; cp ~/.zaliases ~/code/dotfiles' 
+alias vali='vim ~/.zaliases; . ~/.zaliases' 
 alias mali='more ~/.zaliases'
 
 
@@ -318,18 +317,3 @@ alias rp='rake package'
 alias  tccd='tcpdump -l -i eth0 -w - src or dst port 3306 | strings'
 
 
-
-
-
-# Fuckit, I can put functions where I want...
-
-pmod() {
-  package_directory=$1
-  mkdir -p $package_directory;
-  touch $package_directory/__init__.py
-}
-
-
-ale() {
-  cat $1 | jq '.Access_point_result[] | {mac_addr: .msg.ap_eth_mac.addr, ap_name: .msg.ap_name, ap_group: .msg.ap_group }'  
-}
