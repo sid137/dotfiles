@@ -1,3 +1,5 @@
+[[ ! -v $TOKEN_GITHUB_PAT ]] && export GITHUB_TOKEN=$TOKEN_GITHUB_PAT
+
 # Golang
 alias got='go mod tidy'
 alias gg='ginkgo *'
